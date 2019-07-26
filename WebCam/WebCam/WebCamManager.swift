@@ -8,16 +8,13 @@
 
 import Foundation
 
+import MicroServiceManager
 
 public final class WebCamManager : ServiceProcessor
 {
     fileprivate let base : String = "webcamstravel.p.rapidapi.com"
     fileprivate let headers : [String : String] = ["X-RapidAPI-Key" : "zq5He9XmuEmshqt1knmehZbjzjlep19yXUHjsn31uHGHW6zRBZ", "X-RapidAPI-Host" : "webcamstravel.p.rapidapi.com"]
-    
-    public override init()
-    {
-    }
-    
+        
     public func execute(parameters: [String: String], completion: @escaping ((Data?, URLResponse?, Error?) -> Void))
     {
         let host : String = "https://" + base
@@ -36,6 +33,26 @@ public final class WebCamManager : ServiceProcessor
                     sessionDataTask.resume()
                 }
             }
+        }
+    }
+
+    //https://webcamstravel.p.rapidapi.com/webcams/list/nearby=43.57139849416451,-116.1182789707504,50/orderby=distance/limit=20?show=webcams:location,image,url
+    
+    public func execute(latitude : String, longitutde: String, completion: @escaping ((Any?, Error?) -> Void) )
+    {
+        var parameters : [String : String] = [:]
+        
+        let host : String = "https://\(base)/webcams/list/nearby=\(latitude),\(longitutde),50/orderby=distance/limit=20?show=webcams:location,image,url"
+        
+        parameters["url"] = host
+        execute(parameters: parameters) { (data, response, error) in
+            guard let error : Error = error else
+            {
+                debugPrint("[\(#function),\(#line)] data : \(String(describing: data))")
+                completion(data, nil)
+                return
+            }
+            completion(nil, error)
         }
     }
 }

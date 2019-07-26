@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0ACB7E522C5320600313D6B /* MicroServiceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C0ACB7E322C5320600313D6B /* MicroServiceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B53C2A22C5897F00E5D0D8 /* MicroServiceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B53C2822C5897F00E5D0D8 /* MicroServiceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B53C3122C58B4A00E5D0D8 /* ServiceProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B53C3022C58B4900E5D0D8 /* ServiceProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C0ACB7E022C5320600313D6B /* MicroServiceManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MicroServiceManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0ACB7E322C5320600313D6B /* MicroServiceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MicroServiceManager.h; sourceTree = "<group>"; };
-		C0ACB7E422C5320600313D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MicroServiceManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B53C2822C5897F00E5D0D8 /* MicroServiceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MicroServiceManager.h; sourceTree = "<group>"; };
+		C0B53C2922C5897F00E5D0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0B53C3022C58B4900E5D0D8 /* ServiceProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C0ACB7DD22C5320600313D6B /* Frameworks */ = {
+		C0B53C2222C5897E00E5D0D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -27,27 +29,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C0ACB7D622C5320600313D6B = {
+		C0B53C1B22C5897E00E5D0D8 = {
 			isa = PBXGroup;
 			children = (
-				C0ACB7E222C5320600313D6B /* MicroServiceManager */,
-				C0ACB7E122C5320600313D6B /* Products */,
+				C0B53C2722C5897F00E5D0D8 /* MicroServiceManager */,
+				C0B53C2622C5897F00E5D0D8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C0ACB7E122C5320600313D6B /* Products */ = {
+		C0B53C2622C5897F00E5D0D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0ACB7E022C5320600313D6B /* MicroServiceManager.framework */,
+				C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C0ACB7E222C5320600313D6B /* MicroServiceManager */ = {
+		C0B53C2722C5897F00E5D0D8 /* MicroServiceManager */ = {
 			isa = PBXGroup;
 			children = (
-				C0ACB7E322C5320600313D6B /* MicroServiceManager.h */,
-				C0ACB7E422C5320600313D6B /* Info.plist */,
+				C0B53C3022C58B4900E5D0D8 /* ServiceProcessor.swift */,
+				C0B53C2822C5897F00E5D0D8 /* MicroServiceManager.h */,
+				C0B53C2922C5897F00E5D0D8 /* Info.plist */,
 			);
 			path = MicroServiceManager;
 			sourceTree = "<group>";
@@ -55,25 +58,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C0ACB7DB22C5320600313D6B /* Headers */ = {
+		C0B53C2022C5897E00E5D0D8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0ACB7E522C5320600313D6B /* MicroServiceManager.h in Headers */,
+				C0B53C2A22C5897F00E5D0D8 /* MicroServiceManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C0ACB7DF22C5320600313D6B /* MicroServiceManager */ = {
+		C0B53C2422C5897E00E5D0D8 /* MicroServiceManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0ACB7E822C5320600313D6B /* Build configuration list for PBXNativeTarget "MicroServiceManager" */;
+			buildConfigurationList = C0B53C2D22C5897F00E5D0D8 /* Build configuration list for PBXNativeTarget "MicroServiceManager" */;
 			buildPhases = (
-				C0ACB7DB22C5320600313D6B /* Headers */,
-				C0ACB7DC22C5320600313D6B /* Sources */,
-				C0ACB7DD22C5320600313D6B /* Frameworks */,
-				C0ACB7DE22C5320600313D6B /* Resources */,
+				C0B53C2022C5897E00E5D0D8 /* Headers */,
+				C0B53C2122C5897E00E5D0D8 /* Sources */,
+				C0B53C2222C5897E00E5D0D8 /* Frameworks */,
+				C0B53C2322C5897E00E5D0D8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,24 +84,25 @@
 			);
 			name = MicroServiceManager;
 			productName = MicroServiceManager;
-			productReference = C0ACB7E022C5320600313D6B /* MicroServiceManager.framework */;
+			productReference = C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C0ACB7D722C5320600313D6B /* Project object */ = {
+		C0B53C1C22C5897E00E5D0D8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Carmelo Uria Corporation";
 				TargetAttributes = {
-					C0ACB7DF22C5320600313D6B = {
+					C0B53C2422C5897E00E5D0D8 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
-			buildConfigurationList = C0ACB7DA22C5320600313D6B /* Build configuration list for PBXProject "MicroServiceManager" */;
+			buildConfigurationList = C0B53C1F22C5897E00E5D0D8 /* Build configuration list for PBXProject "MicroServiceManager" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -106,18 +110,18 @@
 				en,
 				Base,
 			);
-			mainGroup = C0ACB7D622C5320600313D6B;
-			productRefGroup = C0ACB7E122C5320600313D6B /* Products */;
+			mainGroup = C0B53C1B22C5897E00E5D0D8;
+			productRefGroup = C0B53C2622C5897F00E5D0D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0ACB7DF22C5320600313D6B /* MicroServiceManager */,
+				C0B53C2422C5897E00E5D0D8 /* MicroServiceManager */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C0ACB7DE22C5320600313D6B /* Resources */ = {
+		C0B53C2322C5897E00E5D0D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -127,17 +131,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C0ACB7DC22C5320600313D6B /* Sources */ = {
+		C0B53C2122C5897E00E5D0D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B53C3122C58B4A00E5D0D8 /* ServiceProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C0ACB7E622C5320600313D6B /* Debug */ = {
+		C0B53C2B22C5897F00E5D0D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -200,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		C0ACB7E722C5320600313D6B /* Release */ = {
+		C0B53C2C22C5897F00E5D0D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,10 +262,11 @@
 			};
 			name = Release;
 		};
-		C0ACB7E922C5320600313D6B /* Debug */ = {
+		C0B53C2E22C5897F00E5D0D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 63579VC9UE;
@@ -277,15 +283,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carmelouria.MicroServiceManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Debug;
 		};
-		C0ACB7EA22C5320600313D6B /* Release */ = {
+		C0B53C2F22C5897F00E5D0D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 63579VC9UE;
@@ -310,25 +318,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0ACB7DA22C5320600313D6B /* Build configuration list for PBXProject "MicroServiceManager" */ = {
+		C0B53C1F22C5897E00E5D0D8 /* Build configuration list for PBXProject "MicroServiceManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0ACB7E622C5320600313D6B /* Debug */,
-				C0ACB7E722C5320600313D6B /* Release */,
+				C0B53C2B22C5897F00E5D0D8 /* Debug */,
+				C0B53C2C22C5897F00E5D0D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0ACB7E822C5320600313D6B /* Build configuration list for PBXNativeTarget "MicroServiceManager" */ = {
+		C0B53C2D22C5897F00E5D0D8 /* Build configuration list for PBXNativeTarget "MicroServiceManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0ACB7E922C5320600313D6B /* Debug */,
-				C0ACB7EA22C5320600313D6B /* Release */,
+				C0B53C2E22C5897F00E5D0D8 /* Debug */,
+				C0B53C2F22C5897F00E5D0D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C0ACB7D722C5320600313D6B /* Project object */;
+	rootObject = C0B53C1C22C5897E00E5D0D8 /* Project object */;
 }
