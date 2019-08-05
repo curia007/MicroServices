@@ -24,7 +24,7 @@ open class ServiceProcessor
         sessionDataTask = nil
     }
     
-    open func execute(parameters : [String : Any], headers : [String : String], url : URL, method : HTTPMethod, completion: @escaping ((Data?, URLResponse?, Error?)) -> Void)
+    open func execute(parameters : [String : Any], headers : [String : String], url : URL, method : HTTPMethod, completion: @escaping (Data?, URLResponse?, Error?) -> Void)
     {
         var request : URLRequest = URLRequest(url: url)
         request.httpMethod = method.rawValue
@@ -41,14 +41,14 @@ open class ServiceProcessor
         self.sessionDataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
             guard let error = error else {
                 guard let data = data else {
-                    let myerror : Error = MyError.responseStatusError(status: 0, message: "Web Service called, but no error code or data")
-                    completion((nil, nil, myerror))
+                    let myerror : Error = ServiceError.responseStatusError(status: 0, message: "Web Service called, but no error code or data")
+                    completion(nil, nil, myerror)
                     return
                 }
-                completion((data, nil, nil))
+                completion(data, nil, nil)
                 return
             }
-            completion((nil, nil, error))
+            completion(nil, nil, error)
         })
         
         if let sessionDataTask : URLSessionDataTask = self.sessionDataTask
@@ -83,12 +83,12 @@ public enum HTTPMethod : String
     case HEAD
 }
 
-public enum MyError: Error
+public enum ServiceError: Error
 {
     case responseStatusError(status: Int, message: String)
 }
 
-extension MyError: LocalizedError
+extension ServiceError: LocalizedError
 {
     private var errorDescription: String {
         switch self {

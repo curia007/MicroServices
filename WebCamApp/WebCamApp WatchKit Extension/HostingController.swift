@@ -19,7 +19,14 @@ class HostingController : WKHostingController<ContentView>
     override var body: ContentView
     {
         webCamManager.execute(latitude: "43.571486", longitude: "-116.1182923") { (any, error) in
-            
+            guard let error : Error = error else
+            {
+                
+            }
+            else
+            {
+                
+            }
         }
         return ContentView()
     }
