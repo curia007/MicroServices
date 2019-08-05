@@ -21,12 +21,17 @@ class HostingController : WKHostingController<ContentView>
         webCamManager.execute(latitude: "43.571486", longitude: "-116.1182923") { (any, error) in
             guard let error : Error = error else
             {
+                debugPrint("[\(#function):\(#line)] object: \(String(describing: any))")
                 
+                if let json : [String : Any] = any as? [String : Any]
+                {
+                    debugPrint("[\(#function):\(#line)] object: \(String(describing: json))")
+                }
+            
+                return
             }
-            else
-            {
-                
-            }
+            
+            debugPrint("[\(#function):\(#line)] error: \(error)")
         }
         return ContentView()
     }
