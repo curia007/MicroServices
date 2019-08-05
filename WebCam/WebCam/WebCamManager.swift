@@ -38,21 +38,30 @@ public final class WebCamManager : ServiceProcessor
 
     //https://webcamstravel.p.rapidapi.com/webcams/list/nearby=43.57139849416451,-116.1182789707504,50/orderby=distance/limit=20?show=webcams:location,image,url
     
-    public func execute(latitude : String, longitutde: String, completion: @escaping ((Any?, Error?) -> Void) )
+    public func execute(latitude : String, longitude: String, completion: @escaping ((Any?, Error?) -> Void) )
     {
-        var parameters : [String : String] = [:]
+        var parameters : [String : Any] = [:]
+        var headers : [String : String] = [:]
+        let host : String = "https://\(base)/webcams/list/nearby=\(latitude),\(longitude),50/orderby=distance/limit=20?show=webcams:location,image,url"
         
-        let host : String = "https://\(base)/webcams/list/nearby=\(latitude),\(longitutde),50/orderby=distance/limit=20?show=webcams:location,image,url"
-        
-        parameters["url"] = host
-        execute(parameters: parameters) { (data, response, error) in
-            guard let error : Error = error else
-            {
-                debugPrint("[\(#function),\(#line)] data : \(String(describing: data))")
-                completion(data, nil)
-                return
+        if let url : URL = URL(string: host)
+        {
+            parameters["httpMethod"] = "GET"
+            
+            // HTTP Headers
+            headers["X-RapidAPI-Host"] = "webcamstravel.p.rapidapi.com"
+            headers["X-RapidAPI-Key"] = "zq5He9XmuEmshqt1knmehZbjzjlep19yXUHjsn31uHGHW6zRBZ"
+            
+            super.execute(parameters: parameters, headers: headers, url: url, method: .GET) { (data, response, error) in
+                guard let error : Error = error else
+                {
+                    debugPrint("[\(#function),\(#line)] data : \(String(describing: data))")
+                    completion(data, nil)
+                    return
+                }
+                completion(nil, error)
             }
-            completion(nil, error)
+            
         }
     }
 }

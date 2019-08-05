@@ -10,9 +10,17 @@ import WatchKit
 import Foundation
 import SwiftUI
 
+import WebCam
+
 class HostingController : WKHostingController<ContentView>
 {
-    override var body: ContentView {
+    let webCamManager : WebCamManager = WebCamManager()
+
+    override var body: ContentView
+    {
+        webCamManager.execute(latitude: "43.571486", longitude: "-116.1182923") { (any, error) in
+            
+        }
         return ContentView()
     }
 }

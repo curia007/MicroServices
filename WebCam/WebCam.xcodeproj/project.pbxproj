@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0B53C3722C5926400E5D0D8 /* MicroServiceManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B53C3622C5926400E5D0D8 /* MicroServiceManager.framework */; };
+		C05F6F7F22F8B318008ACCCE /* MicroServiceManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05F6F7E22F8B318008ACCCE /* MicroServiceManager.framework */; };
+		C05F6F8022F8B318008ACCCE /* MicroServiceManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C05F6F7E22F8B318008ACCCE /* MicroServiceManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0EA976D22C56B280037E164 /* WebCam.h in Headers */ = {isa = PBXBuildFile; fileRef = C0EA976B22C56B280037E164 /* WebCam.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0EA977A22C56BCE0037E164 /* WebCamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA977922C56BCE0037E164 /* WebCamManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C05F6F7A22F8AD78008ACCCE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C05F6F8022F8B318008ACCCE /* MicroServiceManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		C0B53C3622C5926400E5D0D8 /* MicroServiceManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MicroServiceManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C05F6F7E22F8B318008ACCCE /* MicroServiceManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MicroServiceManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0EA976822C56B280037E164 /* WebCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0EA976B22C56B280037E164 /* WebCam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebCam.h; sourceTree = "<group>"; };
 		C0EA976C22C56B280037E164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -25,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0B53C3722C5926400E5D0D8 /* MicroServiceManager.framework in Frameworks */,
+				C05F6F7F22F8B318008ACCCE /* MicroServiceManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +77,7 @@
 		C0EA977B22C56E700037E164 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0B53C3622C5926400E5D0D8 /* MicroServiceManager.framework */,
+				C05F6F7E22F8B318008ACCCE /* MicroServiceManager.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -89,6 +104,7 @@
 				C0EA976422C56B280037E164 /* Sources */,
 				C0EA976522C56B280037E164 /* Frameworks */,
 				C0EA976622C56B280037E164 /* Resources */,
+				C05F6F7A22F8AD78008ACCCE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -119,6 +135,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C0EA975E22C56B280037E164;
 			productRefGroup = C0EA976922C56B280037E164 /* Products */;

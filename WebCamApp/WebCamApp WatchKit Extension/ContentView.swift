@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-import WebCam
-
-struct ContentView : View {
+struct ContentView : View
+{
     var body: some View {
+  
         Text("Hello World")
     }
 }
@@ -22,4 +22,5 @@ struct ContentView_Previews : PreviewProvider {
         ContentView()
     }
 }
+
 #endif
