@@ -12,9 +12,9 @@ import MicroServiceManager
 
 struct MicroServicesModel
 {
-    fileprivate var processor : ServiceProcessor = ServiceProcessor()
-    
-    internal mutating func execute()
+    fileprivate let processor : ServiceProcessor = ServiceProcessor()
+
+    internal func execute()
     {
         /*
         curl --request GET \
@@ -29,10 +29,25 @@ struct MicroServicesModel
         }
         
         let headers : [String : String] = ["x-rapidapi-host" : "trailapi-trailapi.p.rapidapi.com", "x-rapidapi-key" : "zq5He9XmuEmshqt1knmehZbjzjlep19yXUHjsn31uHGHW6zRBZ"]
-        let query : [String : Any] = ["lat" : "43.571348137422184", "long" : "-116.11842536072987"]
+        let query : [String : Any] = ["lat" : "43.571348137422184", "lon" : "-116.11842536072987"]
         
         processor.execute(headers : headers, requestURL: url, query : query) { (data, response, error) in
-            print("test")
+            if let error : Error = error
+            {
+                print("error: \(error.localizedDescription)")
+                return
+            }
+            else if let data: Data = data
+            {
+                do {
+                    let any : Any = try self.processor.convert(data: data)
+                    print("any: \(any)")
+                }
+                catch
+                {
+                    print("error: \(error.localizedDescription)")
+                }
+            }
         }
         
     }

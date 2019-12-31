@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ServiceProcessor
+public class ServiceProcessor
 {
     public var sessionDataTask: URLSessionDataTask?
     
@@ -19,14 +19,17 @@ public struct ServiceProcessor
         
     }
     
-    public mutating func execute(parameters : [String : Any] = [:], headers : [String : String] = [:], requestURL : URL, query : [String : Any] = [:], method : HTTPMethod = .GET, completion: @escaping (Data?, URLResponse?, Error?) -> Void)
+    public func execute(parameters : [String : Any] = [:], headers : [String : String] = [:], requestURL : URL, query : [String : Any] = [:], method : HTTPMethod = .GET, completion: @escaping (Data?, URLResponse?, Error?) -> Void)
     {
         var url : URL = requestURL
         
         // check query and append if needed
         if let queryExtenscommand : String = constructQuery(url: url, query: query)
         {
-            url = url.appendingPathExtension(queryExtenscommand)
+            if let appendedURL = URL(string: url.absoluteString + queryExtenscommand)
+            {
+                url = appendedURL
+            }
         }
         
         var request : URLRequest = URLRequest(url: url)
@@ -85,13 +88,13 @@ public struct ServiceProcessor
         
         var queryString : String = "?"
         
-        for (s, a) in query.enumerated()
+        for (_, a) in query.enumerated()
         {
             guard let value : String = a.value as? String else {
                 continue
             }
             
-            queryString += "\(s)"
+            queryString += "\(a.key)"
             queryString += "=\(value)&"
         }
         

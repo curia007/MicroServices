@@ -15,7 +15,7 @@ class HostingController: WKHostingController<ContentView>
     override var body: ContentView
     {
         //TODO: remove test
-        var model : MicroServicesModel = MicroServicesModel()
+        let model : MicroServicesModel = MicroServicesModel()
         model.execute()
         //
         

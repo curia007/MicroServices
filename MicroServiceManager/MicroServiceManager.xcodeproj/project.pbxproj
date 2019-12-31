@@ -20,8 +20,8 @@
 		C03FB16423BBC289000E850C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03FB16323BBC289000E850C /* Assets.xcassets */; };
 		C03FB16723BBC289000E850C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03FB16623BBC289000E850C /* Preview Assets.xcassets */; };
 		C03FB17D23BBCA28000E850C /* MicroServicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03FB17C23BBCA28000E850C /* MicroServicesModel.swift */; };
-		C03FB17E23BBE776000E850C /* MicroServiceManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */; };
-		C03FB17F23BBE776000E850C /* MicroServiceManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C03FB18823BC0F78000E850C /* MicroServiceManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */; };
+		C03FB18923BC0F78000E850C /* MicroServiceManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0B53C2A22C5897F00E5D0D8 /* MicroServiceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B53C2822C5897F00E5D0D8 /* MicroServiceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0B53C3122C58B4A00E5D0D8 /* ServiceProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B53C3022C58B4900E5D0D8 /* ServiceProcessor.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +41,7 @@
 			remoteGlobalIDString = C03FB15123BBC288000E850C;
 			remoteInfo = "TestMicroServices WatchKit Extension";
 		};
-		C03FB18023BBE776000E850C /* PBXContainerItemProxy */ = {
+		C03FB18A23BC0F78000E850C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C0B53C1C22C5897E00E5D0D8 /* Project object */;
 			proxyType = 1;
@@ -73,13 +73,13 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C03FB18223BBE776000E850C /* Embed Frameworks */ = {
+		C03FB18C23BC0F78000E850C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C03FB17F23BBE776000E850C /* MicroServiceManager.framework in Embed Frameworks */,
+				C03FB18923BC0F78000E850C /* MicroServiceManager.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C03FB17E23BBE776000E850C /* MicroServiceManager.framework in Frameworks */,
+				C03FB18823BC0F78000E850C /* MicroServiceManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,12 +267,12 @@
 				C03FB14E23BBC288000E850C /* Sources */,
 				C03FB14F23BBC288000E850C /* Frameworks */,
 				C03FB15023BBC288000E850C /* Resources */,
-				C03FB18223BBE776000E850C /* Embed Frameworks */,
+				C03FB18C23BC0F78000E850C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C03FB18123BBE776000E850C /* PBXTargetDependency */,
+				C03FB18B23BC0F78000E850C /* PBXTargetDependency */,
 			);
 			name = "TestMicroServices WatchKit Extension";
 			productName = "TestMicroServices WatchKit Extension";
@@ -414,10 +414,10 @@
 			target = C03FB15123BBC288000E850C /* TestMicroServices WatchKit Extension */;
 			targetProxy = C03FB15423BBC288000E850C /* PBXContainerItemProxy */;
 		};
-		C03FB18123BBE776000E850C /* PBXTargetDependency */ = {
+		C03FB18B23BC0F78000E850C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C0B53C2422C5897E00E5D0D8 /* MicroServiceManager */;
-			targetProxy = C03FB18023BBE776000E850C /* PBXContainerItemProxy */;
+			targetProxy = C03FB18A23BC0F78000E850C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
