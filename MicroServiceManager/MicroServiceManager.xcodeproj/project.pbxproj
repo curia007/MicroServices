@@ -7,11 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C03FB14423BBC287000E850C /* TestMicroServices WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C03FB14323BBC287000E850C /* TestMicroServices WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C03FB14A23BBC287000E850C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03FB14823BBC287000E850C /* Interface.storyboard */; };
+		C03FB14C23BBC288000E850C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03FB14B23BBC288000E850C /* Assets.xcassets */; };
+		C03FB15323BBC288000E850C /* TestMicroServices WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C03FB15223BBC288000E850C /* TestMicroServices WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C03FB15823BBC288000E850C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03FB15723BBC288000E850C /* ContentView.swift */; };
+		C03FB15A23BBC288000E850C /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03FB15923BBC288000E850C /* HostingController.swift */; };
+		C03FB15C23BBC288000E850C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03FB15B23BBC288000E850C /* ExtensionDelegate.swift */; };
+		C03FB15E23BBC288000E850C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03FB15D23BBC288000E850C /* NotificationController.swift */; };
+		C03FB16023BBC288000E850C /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03FB15F23BBC288000E850C /* NotificationView.swift */; };
+		C03FB16223BBC288000E850C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03FB16123BBC288000E850C /* ComplicationController.swift */; };
+		C03FB16423BBC289000E850C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03FB16323BBC289000E850C /* Assets.xcassets */; };
+		C03FB16723BBC289000E850C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03FB16623BBC289000E850C /* Preview Assets.xcassets */; };
+		C03FB17D23BBCA28000E850C /* MicroServicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03FB17C23BBCA28000E850C /* MicroServicesModel.swift */; };
+		C03FB17E23BBE776000E850C /* MicroServiceManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */; };
+		C03FB17F23BBE776000E850C /* MicroServiceManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0B53C2A22C5897F00E5D0D8 /* MicroServiceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B53C2822C5897F00E5D0D8 /* MicroServiceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0B53C3122C58B4A00E5D0D8 /* ServiceProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B53C3022C58B4900E5D0D8 /* ServiceProcessor.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C03FB14523BBC287000E850C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0B53C1C22C5897E00E5D0D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C03FB14223BBC287000E850C;
+			remoteInfo = "TestMicroServices WatchKit App";
+		};
+		C03FB15423BBC288000E850C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0B53C1C22C5897E00E5D0D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C03FB15123BBC288000E850C;
+			remoteInfo = "TestMicroServices WatchKit Extension";
+		};
+		C03FB18023BBE776000E850C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0B53C1C22C5897E00E5D0D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0B53C2422C5897E00E5D0D8;
+			remoteInfo = MicroServiceManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C03FB16C23BBC289000E850C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C03FB14423BBC287000E850C /* TestMicroServices WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03FB16F23BBC289000E850C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C03FB15323BBC288000E850C /* TestMicroServices WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03FB18223BBE776000E850C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C03FB17F23BBE776000E850C /* MicroServiceManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C03FB14023BBC286000E850C /* TestMicroServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMicroServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C03FB14323BBC287000E850C /* TestMicroServices WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestMicroServices WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C03FB14923BBC287000E850C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C03FB14B23BBC288000E850C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C03FB14D23BBC288000E850C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C03FB15223BBC288000E850C /* TestMicroServices WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TestMicroServices WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C03FB15723BBC288000E850C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C03FB15923BBC288000E850C /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		C03FB15B23BBC288000E850C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C03FB15D23BBC288000E850C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		C03FB15F23BBC288000E850C /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		C03FB16123BBC288000E850C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C03FB16323BBC289000E850C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C03FB16623BBC289000E850C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C03FB16823BBC289000E850C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C03FB16923BBC289000E850C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C03FB17C23BBCA28000E850C /* MicroServicesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroServicesModel.swift; sourceTree = "<group>"; };
 		C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MicroServiceManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B53C2822C5897F00E5D0D8 /* MicroServiceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MicroServiceManager.h; sourceTree = "<group>"; };
 		C0B53C2922C5897F00E5D0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -19,6 +111,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C03FB14F23BBC288000E850C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C03FB17E23BBE776000E850C /* MicroServiceManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0B53C2222C5897E00E5D0D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,11 +129,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C03FB14723BBC287000E850C /* TestMicroServices WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C03FB14823BBC287000E850C /* Interface.storyboard */,
+				C03FB14B23BBC288000E850C /* Assets.xcassets */,
+				C03FB14D23BBC288000E850C /* Info.plist */,
+			);
+			path = "TestMicroServices WatchKit App";
+			sourceTree = "<group>";
+		};
+		C03FB15623BBC288000E850C /* TestMicroServices WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C03FB17B23BBC9C0000E850C /* Models */,
+				C03FB15723BBC288000E850C /* ContentView.swift */,
+				C03FB15923BBC288000E850C /* HostingController.swift */,
+				C03FB15B23BBC288000E850C /* ExtensionDelegate.swift */,
+				C03FB15D23BBC288000E850C /* NotificationController.swift */,
+				C03FB15F23BBC288000E850C /* NotificationView.swift */,
+				C03FB16123BBC288000E850C /* ComplicationController.swift */,
+				C03FB16323BBC289000E850C /* Assets.xcassets */,
+				C03FB16823BBC289000E850C /* Info.plist */,
+				C03FB16923BBC289000E850C /* PushNotificationPayload.apns */,
+				C03FB16523BBC289000E850C /* Preview Content */,
+			);
+			path = "TestMicroServices WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		C03FB16523BBC289000E850C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C03FB16623BBC289000E850C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C03FB17523BBC29A000E850C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C03FB17B23BBC9C0000E850C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C03FB17C23BBCA28000E850C /* MicroServicesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C0B53C1B22C5897E00E5D0D8 = {
 			isa = PBXGroup;
 			children = (
 				C0B53C2722C5897F00E5D0D8 /* MicroServiceManager */,
+				C03FB14723BBC287000E850C /* TestMicroServices WatchKit App */,
+				C03FB15623BBC288000E850C /* TestMicroServices WatchKit Extension */,
 				C0B53C2622C5897F00E5D0D8 /* Products */,
+				C03FB17523BBC29A000E850C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,6 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				C0B53C2522C5897F00E5D0D8 /* MicroServiceManager.framework */,
+				C03FB14023BBC286000E850C /* TestMicroServices.app */,
+				C03FB14323BBC287000E850C /* TestMicroServices WatchKit App.app */,
+				C03FB15223BBC288000E850C /* TestMicroServices WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +226,59 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C03FB13F23BBC286000E850C /* TestMicroServices */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C03FB17423BBC289000E850C /* Build configuration list for PBXNativeTarget "TestMicroServices" */;
+			buildPhases = (
+				C03FB13E23BBC286000E850C /* Resources */,
+				C03FB16C23BBC289000E850C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C03FB14623BBC287000E850C /* PBXTargetDependency */,
+			);
+			name = TestMicroServices;
+			productName = TestMicroServices;
+			productReference = C03FB14023BBC286000E850C /* TestMicroServices.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		C03FB14223BBC287000E850C /* TestMicroServices WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C03FB17323BBC289000E850C /* Build configuration list for PBXNativeTarget "TestMicroServices WatchKit App" */;
+			buildPhases = (
+				C03FB14123BBC287000E850C /* Resources */,
+				C03FB16F23BBC289000E850C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C03FB15523BBC288000E850C /* PBXTargetDependency */,
+			);
+			name = "TestMicroServices WatchKit App";
+			productName = "TestMicroServices WatchKit App";
+			productReference = C03FB14323BBC287000E850C /* TestMicroServices WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C03FB15123BBC288000E850C /* TestMicroServices WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C03FB17223BBC289000E850C /* Build configuration list for PBXNativeTarget "TestMicroServices WatchKit Extension" */;
+			buildPhases = (
+				C03FB14E23BBC288000E850C /* Sources */,
+				C03FB14F23BBC288000E850C /* Frameworks */,
+				C03FB15023BBC288000E850C /* Resources */,
+				C03FB18223BBE776000E850C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C03FB18123BBE776000E850C /* PBXTargetDependency */,
+			);
+			name = "TestMicroServices WatchKit Extension";
+			productName = "TestMicroServices WatchKit Extension";
+			productReference = C03FB15223BBC288000E850C /* TestMicroServices WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		C0B53C2422C5897E00E5D0D8 /* MicroServiceManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0B53C2D22C5897F00E5D0D8 /* Build configuration list for PBXNativeTarget "MicroServiceManager" */;
@@ -93,9 +303,19 @@
 		C0B53C1C22C5897E00E5D0D8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Carmelo Uria Corporation";
 				TargetAttributes = {
+					C03FB13F23BBC286000E850C = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					C03FB14223BBC287000E850C = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					C03FB15123BBC288000E850C = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					C0B53C2422C5897E00E5D0D8 = {
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1100;
@@ -116,11 +336,39 @@
 			projectRoot = "";
 			targets = (
 				C0B53C2422C5897E00E5D0D8 /* MicroServiceManager */,
+				C03FB13F23BBC286000E850C /* TestMicroServices */,
+				C03FB14223BBC287000E850C /* TestMicroServices WatchKit App */,
+				C03FB15123BBC288000E850C /* TestMicroServices WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C03FB13E23BBC286000E850C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03FB14123BBC287000E850C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C03FB14C23BBC288000E850C /* Assets.xcassets in Resources */,
+				C03FB14A23BBC287000E850C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03FB15023BBC288000E850C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C03FB16723BBC289000E850C /* Preview Assets.xcassets in Resources */,
+				C03FB16423BBC289000E850C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0B53C2322C5897E00E5D0D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +379,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C03FB14E23BBC288000E850C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C03FB15A23BBC288000E850C /* HostingController.swift in Sources */,
+				C03FB15823BBC288000E850C /* ContentView.swift in Sources */,
+				C03FB17D23BBCA28000E850C /* MicroServicesModel.swift in Sources */,
+				C03FB15E23BBC288000E850C /* NotificationController.swift in Sources */,
+				C03FB15C23BBC288000E850C /* ExtensionDelegate.swift in Sources */,
+				C03FB16023BBC288000E850C /* NotificationView.swift in Sources */,
+				C03FB16223BBC288000E850C /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0B53C2122C5897E00E5D0D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,7 +403,146 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C03FB14623BBC287000E850C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C03FB14223BBC287000E850C /* TestMicroServices WatchKit App */;
+			targetProxy = C03FB14523BBC287000E850C /* PBXContainerItemProxy */;
+		};
+		C03FB15523BBC288000E850C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C03FB15123BBC288000E850C /* TestMicroServices WatchKit Extension */;
+			targetProxy = C03FB15423BBC288000E850C /* PBXContainerItemProxy */;
+		};
+		C03FB18123BBE776000E850C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0B53C2422C5897E00E5D0D8 /* MicroServiceManager */;
+			targetProxy = C03FB18023BBE776000E850C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C03FB14823BBC287000E850C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C03FB14923BBC287000E850C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		C03FB16A23BBC289000E850C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63579VC9UE;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carmelouria.TestMicroServices;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C03FB16B23BBC289000E850C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63579VC9UE;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carmelouria.TestMicroServices;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C03FB16D23BBC289000E850C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63579VC9UE;
+				IBSC_MODULE = TestMicroServices_WatchKit_Extension;
+				INFOPLIST_FILE = "TestMicroServices WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carmelouria.TestMicroServices.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		C03FB16E23BBC289000E850C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63579VC9UE;
+				IBSC_MODULE = TestMicroServices_WatchKit_Extension;
+				INFOPLIST_FILE = "TestMicroServices WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carmelouria.TestMicroServices.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		C03FB17023BBC289000E850C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TestMicroServices WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 63579VC9UE;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "TestMicroServices WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.carmelouria.TestMicroServices.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		C03FB17123BBC289000E850C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TestMicroServices WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 63579VC9UE;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "TestMicroServices WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.carmelouria.TestMicroServices.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
 		C0B53C2B22C5897F00E5D0D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -318,6 +719,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C03FB17223BBC289000E850C /* Build configuration list for PBXNativeTarget "TestMicroServices WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C03FB17023BBC289000E850C /* Debug */,
+				C03FB17123BBC289000E850C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C03FB17323BBC289000E850C /* Build configuration list for PBXNativeTarget "TestMicroServices WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C03FB16D23BBC289000E850C /* Debug */,
+				C03FB16E23BBC289000E850C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C03FB17423BBC289000E850C /* Build configuration list for PBXNativeTarget "TestMicroServices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C03FB16A23BBC289000E850C /* Debug */,
+				C03FB16B23BBC289000E850C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C0B53C1F22C5897E00E5D0D8 /* Build configuration list for PBXProject "MicroServiceManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

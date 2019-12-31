@@ -1,26 +1,22 @@
 //
 //  ContentView.swift
-//  WebCamApp WatchKit Extension
+//  TestMicroServices WatchKit Extension
 //
-//  Created by Carmelo Uria on 6/27/19.
+//  Created by Carmelo Uria on 12/31/19.
 //  Copyright © 2019 Carmelo Uria Corporation. All rights reserved.
 //
 
 import SwiftUI
+import MicroServiceManager
 
-struct ContentView : View
-{
+struct ContentView: View {
     var body: some View {
-        
-        Text("Hello World")
+        Text("Hello, World!")
     }
 }
 
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-
-#endif

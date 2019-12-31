@@ -8,24 +8,27 @@
 
 import Foundation
 
-open class ServiceProcessor
+public struct ServiceProcessor
 {
     public var sessionDataTask: URLSessionDataTask?
     
     public let session:  URLSession = URLSession(configuration: URLSessionConfiguration.default)
-    
-    public init ()
+      
+    public init()
     {
         
     }
     
-    deinit 
+    public mutating func execute(parameters : [String : Any] = [:], headers : [String : String] = [:], requestURL : URL, query : [String : Any] = [:], method : HTTPMethod = .GET, completion: @escaping (Data?, URLResponse?, Error?) -> Void)
     {
-        sessionDataTask = nil
-    }
-    
-    open func execute(parameters : [String : Any], headers : [String : String], url : URL, method : HTTPMethod, completion: @escaping (Data?, URLResponse?, Error?) -> Void)
-    {
+        var url : URL = requestURL
+        
+        // check query and append if needed
+        if let queryExtenscommand : String = constructQuery(url: url, query: query)
+        {
+            url = url.appendingPathExtension(queryExtenscommand)
+        }
+        
         var request : URLRequest = URLRequest(url: url)
         request.httpMethod = method.rawValue
         
@@ -41,8 +44,8 @@ open class ServiceProcessor
         self.sessionDataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
             guard let error = error else {
                 guard let data = data else {
-                    let myerror : Error = ServiceError.responseStatusError(status: 0, message: "Web Service called, but no error code or data")
-                    completion(nil, nil, myerror)
+                    let sessionError : Error = ServiceError.responseStatusError(status: 0, message: "Web Service called, but no error code or data")
+                    completion(nil, nil, sessionError)
                     return
                 }
                 completion(data, nil, nil)
@@ -57,21 +60,47 @@ open class ServiceProcessor
         }
     }
     
-    open func getSession() -> URLSession
+    public func getSession() -> URLSession
     {
         return session
     }
     
-    open func convert(data : Data, options opt: JSONSerialization.ReadingOptions = []) throws -> Any
+    public func convert(data : Data, options opt: JSONSerialization.ReadingOptions = []) throws -> Any
     {
         return try JSONSerialization.jsonObject(with: data, options: opt)
     }
     
-    open func convert(json : Any, options opt: JSONSerialization.WritingOptions = []) throws -> Data
+    public func convert(json : Any, options opt: JSONSerialization.WritingOptions = []) throws -> Data
     {
         return try JSONSerialization.data(withJSONObject: json, options: opt)
     }
     
+    fileprivate func constructQuery(url: URL, query : [String : Any]) -> String?
+    {
+        
+        if (query.isEmpty == true)
+        {
+            return nil
+        }
+        
+        var queryString : String = "?"
+        
+        for (s, a) in query.enumerated()
+        {
+            guard let value : String = a.value as? String else {
+                continue
+            }
+            
+            queryString += "\(s)"
+            queryString += "=\(value)&"
+        }
+        
+        queryString = String(queryString.dropLast())
+        
+        debugPrint("queryString: \(queryString)")
+
+        return queryString
+    }
 }
 
 public enum HTTPMethod : String
