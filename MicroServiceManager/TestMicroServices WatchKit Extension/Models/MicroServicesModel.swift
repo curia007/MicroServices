@@ -29,7 +29,7 @@ struct MicroServicesModel
         }
         
         let headers : [String : String] = ["x-rapidapi-host" : "trailapi-trailapi.p.rapidapi.com", "x-rapidapi-key" : "zq5He9XmuEmshqt1knmehZbjzjlep19yXUHjsn31uHGHW6zRBZ"]
-        let query : [String : Any] = ["lat" : "43.571348137422184", "lon" : "-116.11842536072987"]
+        let query : [String : Any] = ["lat" : "43.571348137422184", "long" : "-116.11842536072987"]
         
         processor.execute(headers : headers, requestURL: url, query : query) { (data, response, error) in
             if let error : Error = error
@@ -39,27 +39,33 @@ struct MicroServicesModel
             }
             else if let data: Data = data
             {
-                let bikeTrailData : BikeTrailData  = self.processor.convert(data: data)
-                let bikeTrails : [BikeTrail] = bikeTrailData.data
-                
-                debugPrint("bike trails: \(bikeTrails)")
-                
-                /*
-                do {
-                    
-                    let any : Any = try self.processor.convert(data: data)
-                    print("any: \(any)")
-                    
-                    if let dictionary : [String : Any] = any as? [String : Any]
+                do
+                {
+                    if let bikeTrailData : BikeTrailData = try self.processor.convert(data: data)
                     {
-                        print("dictionary: \(dictionary)")
+                        let bikeTrails : [BikeTrail] = bikeTrailData.data
+                    
+                        debugPrint("bike trails: \(bikeTrails)")
+                    }
+                    else
+                    {
+                        if let serviceError : ServiceError = try self.processor.convert(data: data)
+                        {
+                            print("error: \(serviceError)")
+                        //let any : Any = try self.processor.convert(data: data)
+                        //debugPrint("Service Output: \(any)")
+                        }
+                        else
+                        {
+                            print("Error:  something went wrong")
+                        }
                     }
                 }
                 catch
                 {
                     print("error: \(error.localizedDescription)")
                 }
-                */
+
             }
         }
         

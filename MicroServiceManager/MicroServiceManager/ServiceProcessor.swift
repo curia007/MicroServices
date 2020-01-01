@@ -68,7 +68,7 @@ public class ServiceProcessor
         return session
     }
     
-    public func convert<T: Decodable>(data : Data) -> T
+    public func convert<T: Decodable>(data : Data) throws -> T?
     {
         do
         {
@@ -77,17 +77,17 @@ public class ServiceProcessor
         }
         catch
         {
-            fatalError("Couldn't parse \(T.self):\n\(error)")
-            //ServiceError.responseStatusError(status: -1, message:"Couldn't parse \(T.self):\n\(error)")
+            //fatalError("Couldn't parse \(T.self):\n\(error)")
+            ServiceError.responseStatusError(status: -1, message:"Couldn't parse \(T.self):\n\(error)")
         }
+        
+        return nil
     }
     
-    /*
     public func convert(data : Data, options opt: JSONSerialization.ReadingOptions = []) throws -> Any
     {
         return try JSONSerialization.jsonObject(with: data, options: opt)
     }
-    */
     
     public func convert(json : Any, options opt: JSONSerialization.WritingOptions = []) throws -> Data
     {
