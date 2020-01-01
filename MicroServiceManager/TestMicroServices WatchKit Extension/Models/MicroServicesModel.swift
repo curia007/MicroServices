@@ -39,14 +39,27 @@ struct MicroServicesModel
             }
             else if let data: Data = data
             {
+                let bikeTrailData : BikeTrailData  = self.processor.convert(data: data)
+                let bikeTrails : [BikeTrail] = bikeTrailData.data
+                
+                debugPrint("bike trails: \(bikeTrails)")
+                
+                /*
                 do {
+                    
                     let any : Any = try self.processor.convert(data: data)
                     print("any: \(any)")
+                    
+                    if let dictionary : [String : Any] = any as? [String : Any]
+                    {
+                        print("dictionary: \(dictionary)")
+                    }
                 }
                 catch
                 {
                     print("error: \(error.localizedDescription)")
                 }
+                */
             }
         }
         

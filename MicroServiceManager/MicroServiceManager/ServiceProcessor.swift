@@ -68,10 +68,26 @@ public class ServiceProcessor
         return session
     }
     
+    public func convert<T: Decodable>(data : Data) -> T
+    {
+        do
+        {
+            let decoder = JSONDecoder()
+            return try decoder.decode(T.self, from: data)
+        }
+        catch
+        {
+            fatalError("Couldn't parse \(T.self):\n\(error)")
+            //ServiceError.responseStatusError(status: -1, message:"Couldn't parse \(T.self):\n\(error)")
+        }
+    }
+    
+    /*
     public func convert(data : Data, options opt: JSONSerialization.ReadingOptions = []) throws -> Any
     {
         return try JSONSerialization.jsonObject(with: data, options: opt)
     }
+    */
     
     public func convert(json : Any, options opt: JSONSerialization.WritingOptions = []) throws -> Data
     {
