@@ -29,7 +29,7 @@ struct MicroServicesModel
         }
         
         let headers : [String : String] = ["x-rapidapi-host" : "trailapi-trailapi.p.rapidapi.com", "x-rapidapi-key" : "zq5He9XmuEmshqt1knmehZbjzjlep19yXUHjsn31uHGHW6zRBZ"]
-        let query : [String : Any] = ["lat" : "43.571348137422184", "long" : "-116.11842536072987"]
+        let query : [String : Any] = ["lat" : "43.571348137422184", "lon" : "-116.11842536072987"]
         
         processor.execute(headers : headers, requestURL: url, query : query) { (data, response, error) in
             if let error : Error = error
